@@ -1,8 +1,10 @@
 package main
 
-import ("fmt"
-		"os"
-		"bufio"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
 )
 
 func startRepl() {
@@ -19,7 +21,7 @@ func startRepl() {
 
 }
 
-func cleanInput(str string) [] {
+func cleanInput(str string) []string {
 	lowered := strings.ToLower(str)
 	words := strings.Fields(lowered)
 	return words
