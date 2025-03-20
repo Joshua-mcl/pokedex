@@ -11,7 +11,7 @@ func callbackMap(cfg *config) error {
 	resp, err := cfg.pokeapiClient.ListLocationAreas(cfg.nextLocationAreaURL)
 
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 	fmt.Println("Location areas:")
 	for _, area := range resp.Results {
